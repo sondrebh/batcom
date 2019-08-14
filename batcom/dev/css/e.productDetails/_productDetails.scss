@@ -1,0 +1,225 @@
+.lStatus {
+    display: inline;
+}
+
+.lStatus:hover {
+    cursor: pointer;
+    color: $clRed;
+}
+
+.pdContainer {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    box-sizing: border-box;
+    padding-top: 10px;
+
+    .pdGallery {
+        height: 400px;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .arrow {
+        font-size: 26px;
+    }
+
+    .pdImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 60%;
+            width: 60%;
+            object-fit: contain;
+            display: none;
+        }
+
+        .shown {
+            display: block;
+        }
+    }
+
+    .arrow:hover {
+        cursor: pointer;
+    }
+
+    .pdInfo {
+        box-sizing: border-box;
+        padding: 40px 0px 0px 80px;
+
+        .pdTitle {
+            float: left;
+            width: 100%;
+
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .pdUndertitle {
+            float: left;
+            width: 100%;
+
+            padding-top: 4px;
+
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .pdAddtocart {
+            padding-top: 40px;
+            width: 80%;
+
+            float: left;
+        }
+
+        .rating {
+            float: left;
+            width: 80%;
+            font-size: 12px;
+
+            font-weight: 700;
+            padding-bottom: 8px;
+            padding-top: 40px;
+        }
+
+        .ratingC {
+            position: relative;
+            height: 6px;
+            width: 70%;
+            float: left;
+
+            background: $clBorder;
+            border-radius: 4px;
+        }
+
+        .ratingB {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            height: 6px;
+            width: 90%;
+            border-radius: 4px;
+
+            background: $clRed;
+        }
+
+        .ratingText {
+            float: left;
+
+            font-size: 12px;
+
+            font-weight: 700;
+            margin: -4px 0 0 10px;
+        }
+
+        .pdStock {
+            padding-top: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            padding-bottom: 10px;
+        }
+
+        .pdQuantity {
+            width: 100%;
+            height: 40px;
+
+            display: grid;
+            grid-template-columns: 25% 50% 25%;
+        }
+
+        .pdQBtn {
+            border-radius: 4px;
+            background: $clRed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 24px;
+            font-weight: 700;
+            color: $clTextWhite;
+        }
+
+        .pdQNumber {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .pdQBtn:hover {
+            cursor: pointer;
+        }
+
+        .pdBtn {
+            height: 40px;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-top: 10px;
+            background: $clRed;
+            color: $clTextWhite;
+        }
+
+        .pdBtn:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.pdMore {
+    text-align: left;
+
+    line-height: 20px;
+
+    width: 60%;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1000px) {
+    .pdContainer {
+        grid-template-columns: 100%;
+
+        .pdInfo {
+            box-sizing: border-box;
+            padding: 0px;
+
+            .pdTitle {
+                font-size: 22px;
+            }
+
+            .pdAddtocart {
+                padding-top: 40px;
+                width: 100%;
+    
+                float: left;
+            }
+        }
+    }
+
+    .pdMore {
+        padding-top: 20px;
+        width: 100%;
+    }
+}

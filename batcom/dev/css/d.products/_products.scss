@@ -1,0 +1,347 @@
+.products {
+    width: $pageWidth;
+    margin: auto;
+
+    padding-top: 140px;
+}
+
+.filter {
+    width: 100%;
+
+    .upper {
+        p {
+            font-size: 12px;
+            font-weight: 500;
+            display: inline;
+        }
+    }
+
+    .lower {
+        margin-top: 14px;
+
+        width: 280px;
+        height: 40px;
+
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+
+        border-radius: 4px;
+
+        -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+
+        .panel {
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 700;
+        }
+
+        .panel:hover {
+            cursor: pointer;
+        }
+
+        .panel:first-of-type {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .panel:last-of-type {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chosenPanel {
+            background: $clRed;
+            color: $clTextWhite;
+        }
+    }
+
+    .sort {
+        height: 40px;
+        width: 200px;
+        float: right;
+
+        display: inline-block;
+
+        margin-top: 14px;
+
+        outline: none;
+        border: none;
+        border-radius: 4px;
+
+        padding: 0 8px;
+        background: $clWhite;
+        font-family: $baseFont;
+
+        -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.product {
+    height: 300px;
+    width: 100%;
+
+    margin: auto;
+
+    margin-top: 20px;
+
+    border-radius: 6px;
+
+    box-sizing: border-box;
+    padding: 20px;
+
+    -webkit-box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+
+    .imageContainer {
+        height: 100%;
+        width: 40%;
+
+        float: left;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .title {
+
+        float: left;
+
+        font-size: 24px;
+
+        font-weight: 700;
+
+        padding: 20px 0 10px 40px;
+    }
+
+    .price {
+        float: right;
+
+        font-size: 24px;
+        font-weight: 700;
+
+        padding: 20px 20px 0 0;
+    }
+
+    .undertitle {
+        width: 40%;
+        float: left;
+
+        font-size: 14px;
+
+        font-weight: 500;
+
+        padding: 0 0 40px 40px;
+    }
+
+    .rating {
+        width: 40%;
+        float: left;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        padding: 0 0 6px 40px;
+    }
+
+    .ratingC {
+        position: relative;
+        height: 6px;
+        width: 30%;
+        float: left;
+
+        margin-left: 40px;
+
+        background: $clBorder;
+        border-radius: 4px;
+    }
+
+    .ratingB {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        height: 6px;
+        width: 90%;
+        border-radius: 4px;
+
+        background: $clRed;
+    }
+
+    .ratingText {
+        float: left;
+
+        width: 20%;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        margin: -4px 0 0 10px;
+    }
+
+    .stockText {
+        float: left;
+
+        font-size: 14px;
+
+        font-weight: 500;
+
+        padding: 80px 0 0 40px;
+    }
+
+    .addToCart {
+        float: right;
+
+        width: 180px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 4px;
+
+        background: $clRed;
+        color: $clTextWhite;
+
+        font-size: 16px;
+
+        font-weight: 500;
+
+        margin: 50px 10px 0 10px;
+    }
+
+    .addToCart:hover {
+        cursor: pointer;
+    }
+}
+
+.product:hover {
+    cursor: pointer;
+}
+
+// Media queries
+
+@media only screen and (max-width: 1600px) {
+    .products {
+        width: $pageWidthLower;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .products {
+        padding-top: 10px;
+    }
+
+    .filter > .sort {
+        width: 20px;
+        background: $clWhite;
+    }
+
+    .product {
+        .title {
+            font-size: 16px;
+            padding: 20px 0 10px 40px;
+        }
+
+        .undertitle {
+            font-size: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .products {
+        padding-top: 0px;
+    }
+
+    .product {
+        .title {
+            font-size: 12px;
+            padding: 0 0;
+        }
+
+        .addToCart {
+            float: right;
+    
+            width: 54%;
+            height: 40px;
+
+            font-size: 14px;
+    
+            margin: 40px 0px;
+        }
+
+        .undertitle {
+            width: 40%;
+            float: left;
+    
+            font-size: 10px;
+    
+            font-weight: 500;
+    
+            padding: 0 0;
+            padding-top: 10px;
+        }
+
+        .price {
+            float: right;
+    
+            font-size: 18px;
+            font-weight: 700;
+    
+            padding: 0 0;
+            padding-top: 10px;
+        }
+
+        .rating {
+            width: 40%;
+            float: left;
+    
+            font-size: 12px;
+    
+            font-weight: 700;
+    
+            padding: 10px 0 0;
+        }
+    
+        .ratingC {
+
+            margin-left: 0;
+            margin: 10px 0 0;
+
+        }
+
+        .ratingText {
+            float: left;
+    
+            width: 20%;
+    
+            font-size: 12px;
+    
+            font-weight: 700;
+    
+            margin: 8px 0 0 10px;
+        }
+
+        .stockText {
+            padding: 10px 0 0 0px;
+        }
+    }
+
+    
+}

@@ -1,0 +1,1 @@
+popper.populate("products", gpuList);

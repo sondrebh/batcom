@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>batcom</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a443db9d50.js"></script>
+
+    <link rel="stylesheet" href="CSS/main.css">
+
+    <script data-main="js/setup" src="js/require.js"></script>
+</head>
+
+<body>
+
+    <div id="nav" class="nav">
+        <div class="navContainer">
+            <div class="navUpper">
+                <div class="navLogo">
+                    <img src="resources/images/batcomLogo.svg">
+                    <p>batcom</p>
+                </div>
+
+                <div class="navSearch">
+                    <div class="inputBox">
+                        <input type="text" placeholder="Search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="navIcons">
+                    <i class="fas fa-question-circle"></i>
+                    <i class="fas fa-user"></i>
+                    <i id="shoppingCart" class="fas fa-shopping-cart">
+                        <div id="cart" class="cart"></div>
+                    </i>
+                </div>
+            </div>
+        </div>
+
+        <div class="lowerContainer">
+            <div class="navLower">
+                <div class="navCategory">
+                    <div id="navCategoryBtn">
+                        <i class="fas fa-stream"></i>
+                        <p>All products</p>
+                    </div>
+
+                    <div id="categoryBrowser" class="navBrowser">
+                        <div id="gpuLink" name="GPU" class="categories">
+                            <i class="fas fa-folder"></i>
+                            <p>Graphics Cards</p>
+                            <p><i class="fas fa-chevron-right"></i></p>
+                        </div>
+
+                        <div id="moboLink" name="MOBO" class="categories">
+                            <i class="fas fa-border-style"></i>
+                            <p>Motherboards</p>
+                            <p><i class="fas fa-chevron-right"></i></p>
+                        </div>
+
+                        <div id="cpuLink" name="CPU" class="categories">
+                            <i class="fas fa-microchip"></i>
+                            <p>Processors</p>
+                            <p><i class="fas fa-chevron-right"></i></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navLowerMiddle">
+
+                </div>
+
+                <div class="navLowerRight">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navMobile">
+        <i id="navMmenu" class="fas fa-stream"></i>
+        <i id="mSearch" class="fas fa-search"></i>
+        <i class="fas fa-user"></i>
+        <i onclick="cart.notify(1)" class="fas fa-shopping-cart">
+            <div id="cart2" class="cart2"></div>
+        </i>
+    </div>
+
+    <div id="mSearchCon" class="mobileSearch">
+        <div class="navSearch">
+            <div class="inputBox">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="navMobileMenu" class="navMobileMenu">
+        <div id="gpuLinkMobile">
+            <i class="fas fa-folder"></i>
+            <p>Graphics Cards</p>
+            <p><i class="fas fa-chevron-right"></i></p>
+        </div>
+
+        <div>
+            <i class="fas fa-border-style"></i>
+            <p>Motherboards</p>
+            <p><i class="fas fa-chevron-right"></i></p>
+        </div>
+
+        <div>
+            <i class="fas fa-microchip"></i>
+            <p>Processors</p>
+            <p><i class="fas fa-chevron-right"></i></p>
+        </div>
+    </div>
+
+    <div id="blocker" class="blocker"></div>
+
+    <div id="home" class="view">
+    </div>
+
+    <div id="products" class="view">
+        <div id="productsContainer" class="products">
+            <div class="filter">
+                <div class="upper">
+                    <p>You are here: Home > Graphics Cards</p>
+                </div>
+
+                <div class="lower">
+                    <div id="nvidia" class="panel">NVIDIA</div>
+                    <div id="amd" class="panel">AMD</div>
+                    <div id="both" class="panel chosenPanel">BOTH</div>
+                </div>
+
+                <select id="sort" class="sort">
+                    <option value="0">Sort by</option>
+                    <option value="Price">Price</option>
+                    <option value="Rating">Rating</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div id="productDetails" class="view">
+        <div class="products">
+            <div class="filter">
+                <div class="upper">
+                    <p id="locationStatus">You are here: Home > Graphics Cards</p>
+                </div>
+            </div>
+
+            <div class="pdContainer">
+                <div class="pdGallery">
+                    <div id="arrowLeft" class="arrow">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+
+                    <div class="pdImage">
+
+                    </div>
+
+                    <div id="arrowRight" class="arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="pdInfo">
+                    <p id="pdTitle" class="pdTitle">Geforce RTX 2080</p>
+                    <p id="pdUndertitle" class="pdUndertitle">Graphics card, PCI-Express 3.0, 24GB GDDR6</p>
+
+                    <p class="rating">Rating</p>
+                    <div class="ratingC">
+                        <div id="ratingB" class="ratingB" style="width: 90%;"></div>
+                    </div>
+                    <p id="ratingText" class="ratingText">9/10</p>
+
+
+                    <div class="pdAddtocart">
+
+                        <p id="pdStock" class="pdStock">9+ left in stock</p>
+
+                        <div class="pdQuantity">
+                            <div id="pdQMinus" class="pdQBtn">
+                                -
+                            </div>
+
+                            <div id="pdQNumber" class="pdQNumber">
+                                0
+                            </div>
+
+                            <div id="pdQAdd" class="pdQBtn">
+                                +
+                            </div>
+                        </div>
+
+                        <div onclick="cart.notify()" class="pdBtn">
+                            Add to cart
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pdMore" class="pdMore">
+                Id consequat commodo occaecat veniam. Amet fugiat duis sunt voluptate adipisicing culpa cillum
+                consectetur in aliqua cupidatat. Do consectetur nulla ut aliqua non pariatur nulla est. Reprehenderit do
+                magna incididunt commodo. Ut occaecat exercitation veniam magna ex consequat dolor. Eiusmod ipsum Lorem
+                ad dolore sint officia cillum commodo. Enim esse ex consequat deserunt veniam Lorem. Aute irure sint
+                excepteur dolor elit eu sint aliqua velit est labore dolore. Minim amet adipisicing sunt ex consequat ea
+                consequat quis duis id reprehenderit.
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="footer" class="footer">
+        <div class="upperFooter">
+            <div class="uFcontainer">
+                <div class="uFnewsletter">
+                    <p>Sign up for the daily batcom</p>
+                    <input type="text" placeholder="Your email">
+                    <div>SIGN UP</div>
+                </div>
+
+                <div class="uFlogoC">
+                    <div class="uFlogo">
+                        <img src="resources/images/batcomLogo.svg">
+                        <p>batcom</p>
+                    </div>
+                </div>
+
+                <div class="uFright">
+                    <div class="uFmore">
+                        <p class="uTitle">More</p>
+                        <p class="uText">Terms</p>
+                        <p class="uText">New products</p>
+                        <p class="uText">Support</p>
+                    </div>
+
+                    <div class="uFshortcuts">
+                        <p class="uTitle">Shortcuts</p>
+                        <p class="uText">My page</p>
+                        <p class="uText">Orders</p>
+                        <p class="uText">Giftcards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lowerFooter">
+            <div class="lFcontainer">
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitch"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter-square"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

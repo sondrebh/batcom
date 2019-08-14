@@ -1,0 +1,33 @@
+$clTextWhite: #F7F6EF;
+$clWhite: #FFFFFF;
+$clBorder: #F3F4F7;
+$clPurple: #3F4B70;
+$clDark: #575757;
+$clRed: #FF5F56;
+
+$baseFont: 'Montserrat',
+sans-serif;
+$logo: url("../resources/images/batcomLogo.svg");
+
+html, body {
+    height: 100%;
+    width: 100%;
+
+    font-family: $baseFont;
+
+    color: $clDark;
+
+    background-color: $clWhite;
+}
+
+.view {
+    position: relative;
+
+    width: 100%;
+
+    display: none;
+}
+
+//vars
+$pageWidth: 58%;
+$pageWidthLower: 90%;
